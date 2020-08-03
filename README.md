@@ -1,10 +1,9 @@
-# Storybook based on Typescript
+# Play with Storybook based on Typescript
 
+[DEMO]()
+----
 ### Todos
-- [ ]
-- [ ]
-- [ ]
-- [ ]
-
-### Reference
-- [https://storybook.js.org/docs/configurations/typescript-config/](https://storybook.js.org/docs/configurations/typescript-config/)
+- [x] use Babel instead of Webpack
+- [ ] TBD
+- [ ] TBD
+- [ ] TBD

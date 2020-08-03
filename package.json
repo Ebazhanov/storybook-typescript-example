@@ -19,6 +19,7 @@
     "@storybook/react": "^5.3.19",
     "@storybook/source-loader": "^5.3.19",
     "@types/jest": "^26.0.8",
+    "@types/styled-components": "^5.1.2",
     "babel-loader": "^8.1.0",
     "jest": "^26.2.2",
     "ts-jest": "^26.1.4",
