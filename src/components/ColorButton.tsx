@@ -7,5 +7,9 @@ export interface IProps {
 
 export default (props: IProps) => {
     const {color, onClick} = props;
-    return <button style={{color}} onClick={() => onClick && onClick(color)}>Color Button</button>
+    return <button
+        style={{color}}
+        onClick={() => onClick && onClick(color)}
+    >Color Button
+    </button>
 }
