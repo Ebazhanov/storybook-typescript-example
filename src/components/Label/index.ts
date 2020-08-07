@@ -1,1 +1,1 @@
-export {default, LabelWrapper} from './Label';
+export {default, StyledLabel} from './Label';

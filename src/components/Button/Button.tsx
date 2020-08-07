@@ -1,16 +1,16 @@
 import React from 'react';
-import {ButtonWrapper} from './styled';
+import {Wrapper} from './styled';
 
 export default function Button(props: any): any {
     return (
-        <ButtonWrapper>
+        <Wrapper>
             <button
                 onClick={props.onClick}
                 type='button'
             >{props.children}
             </button>
-        </ButtonWrapper>
+        </Wrapper>
     );
 }
 
-export {ButtonWrapper as ButtonWrapper};
+export {Wrapper as StyledButton};

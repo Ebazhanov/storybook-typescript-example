@@ -1,8 +1,8 @@
 {
-    "parser": "typescript",
-    "arrowParens": "always",
-    "printWidth": 120,
-    "singleQuote": true,
-    "tabWidth": 4,
-    "trailingComma": "all"
+  "parser": "typescript",
+  "arrowParens": "always",
+  "printWidth": 120,
+  "singleQuote": true,
+  "tabWidth": 4,
+  "trailingComma": "all"
 }

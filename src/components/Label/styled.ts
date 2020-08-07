@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const LabelWrapper = styled.label`
+export const Wrapper = styled.label`
     color: inherit;
     cursor: pointer;
     display: inline-flex;
