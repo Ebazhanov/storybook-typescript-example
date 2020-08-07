@@ -1,1 +1,1 @@
-export { default } from './Button';
+export {default, ButtonWrapper} from './Button';

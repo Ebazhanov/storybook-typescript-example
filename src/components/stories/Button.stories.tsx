@@ -1,5 +1,5 @@
-import React from "react";
-import Button from "../Button/Button";
+import React from 'react';
+import {Button} from "..";
 import {PageWrapper} from "../storybook";
 
 export default {
@@ -9,6 +9,6 @@ export default {
 
 export const LoadButton = () => (
     <PageWrapper>
-        <Button>Click to Load</Button>
+        <Button>Click to load</Button>
     </PageWrapper>
 );

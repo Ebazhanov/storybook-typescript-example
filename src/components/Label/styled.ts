@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.label`
+export const LabelWrapper = styled.label`
     color: inherit;
     cursor: pointer;
     display: inline-flex;
     font-family: inherit;
-    font-size: 12px;
+    font-size: 100px;
     line-height: 1.5;
 
     .RequiredIndicator {

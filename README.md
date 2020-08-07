@@ -2,9 +2,9 @@
 
 ### Todos
 - [x] use Babel instead of Webpack
-- [ ] TBD
-- [ ] TBD
-- [ ] TBD
+- [ ] add more components and stories for them
+- [ ] publich stortybook on github pages instead of netlify
+- [ ] write unit tests for each component
 
 [DEMO](https://storybook-typescript.netlify.app/)
 ----

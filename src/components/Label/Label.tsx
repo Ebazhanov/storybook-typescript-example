@@ -1,13 +1,13 @@
 import React from 'react';
-import {Wrapper} from './styled';
+import {LabelWrapper} from './styled';
 
 export default function Label():any {
     return (
-        <Wrapper htmlFor="htmlFor">
+        <LabelWrapper htmlFor="htmlFor">
             <div className="RequiredIndicator">*</div>
             <div className="TooltipWrapper">Label</div>
-        </Wrapper>
+        </LabelWrapper>
     );
 }
 
-export {Wrapper as StyledLabel};
+export {LabelWrapper as LabelWrapper};
