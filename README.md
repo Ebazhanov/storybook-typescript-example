@@ -4,7 +4,7 @@
 - [x] transpile code using Babel instead of Webpack
 - [ ] add more components and stories for them
 - [ ] publish Stortybook on github pages instead of netlify.app
-- [ ] write unit tests for each component
+- [ ] write unit tests for each component with Enzyme
 
 [DEMO](https://storybook-typescript.netlify.app/)
 ----
