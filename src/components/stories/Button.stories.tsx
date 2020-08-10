@@ -1,6 +1,6 @@
 import React from 'react';
 import {Button} from "..";
-import { withA11y } from '@storybook/addon-a11y';
+import {withA11y} from '@storybook/addon-a11y';
 import {PageWrapper} from "../storybook";
 
 export default {
@@ -9,14 +9,22 @@ export default {
     component: Button
 };
 
-export const LoadButton = () => (
+export const Primary = () =>
     <PageWrapper>
-        <Button>Click to load</Button>
+        <Button variant='primary'>Primary</Button>
     </PageWrapper>
-);
 
-export const SaveButton = () => (
+export const Secondary = () =>
     <PageWrapper>
-        <Button>Save</Button>
+        <Button variant='secondary'>Secondary</Button>
     </PageWrapper>
-);
+
+export const Success = () =>
+    <PageWrapper>
+        <Button variant='success'>Success</Button>
+    </PageWrapper>
+
+export const Danger = () =>
+    <PageWrapper>
+        <Button variant='danger'>Danger</Button>
+    </PageWrapper>

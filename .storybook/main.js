@@ -21,7 +21,7 @@ module.exports = {
                 loaders: [
                     {
                         loader: require.resolve('@storybook/source-loader'),
-                        options: { parser: 'typescript' },
+                        options: {parser: 'typescript'},
                     },
                 ],
                 enforce: 'pre',
