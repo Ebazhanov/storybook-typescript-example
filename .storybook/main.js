@@ -1,16 +1,15 @@
 const path = require('path');
 const ROOT = path.resolve(__dirname, '../');
 const SRC = `${ROOT}/src`;
-const PATH_TO_SVG = `${SRC}/core/svg`;
 
 module.exports = {
     stories: ['../src/**/*.stories.[tj]sx'],
+    addons: [
+        '@storybook/addon-storysource',
+        '@storybook/addon-docs',
+        '@storybook/addon-actions'
+    ],
     webpackFinal: async (config) => {
-        const fileLoaderRule = config.module.rules.find(
-            (rule) => typeof rule.test.test === 'function' && rule.test.test('.svg'),
-        );
-        fileLoaderRule.exclude = PATH_TO_SVG;
-
         config.module.rules.push(
             {
                 test: /\.tsx?$/,
@@ -28,7 +27,6 @@ module.exports = {
             },
             {
                 test: /\.svg$/,
-                include: PATH_TO_SVG,
                 use: [
                     {
                         loader: '@svgr/webpack',
