@@ -1,5 +1,5 @@
 import React from 'react';
-import {Wrapper} from './styled';
+import { Wrapper } from './styled';
 
 export default function Label(): any {
     return (
@@ -10,4 +10,4 @@ export default function Label(): any {
     );
 }
 
-export {Wrapper as StyledLabel};
+export { Wrapper as StyledLabel };

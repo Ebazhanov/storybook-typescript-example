@@ -1,19 +1,12 @@
-import React from 'react';
-import {Wrapper} from './styled';
+import React, { memo } from 'react';
+import { StyledButton } from './styled';
+import { ComponentProps } from './types';
 
-export default function Button(props: any): any {
+function Button(props: ComponentProps) {
+    const { onClick, children } = props;
 
-    const {variant = 'primary', buttonText, ...rest} = props
-
-    return (
-        <Wrapper>
-            <button className={`button ${variant}`} {...rest}
-                    onClick={props.onClick}
-                    type='button'
-            >{buttonText}
-            </button>
-        </Wrapper>
-    );
+    return <StyledButton onClick={onClick}>{children}</StyledButton>;
 }
 
-export {Wrapper as StyledButton};
+export { StyledButton };
+export default memo(Button);
