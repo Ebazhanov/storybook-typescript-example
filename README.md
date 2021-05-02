@@ -1,6 +1,6 @@
 # Playground with Storybook based on Typescript
 
-![Alt text](https://monosnap.com/image/BKGEKZa3WAmq0GrvddxeVyqpck9pll)
+![Alt text](https://monosnap.com/image/uXRlRFmjVE5WPFSgL1kEhGbtbALCUS)
 
 ### Todos
 - [x] transpile code using Babel instead of Webpack
