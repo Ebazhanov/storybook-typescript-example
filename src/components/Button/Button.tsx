@@ -3,9 +3,13 @@ import { StyledButton } from './styled';
 import { ComponentProps } from './types';
 
 function Button(props: ComponentProps) {
-    const { onClick, children } = props;
+    const { onClick, children, id } = props;
 
-    return <StyledButton onClick={onClick}>{children}</StyledButton>;
+    return (
+        <StyledButton id={id} onClick={onClick}>
+            {children}
+        </StyledButton>
+    );
 }
 
 export { StyledButton };

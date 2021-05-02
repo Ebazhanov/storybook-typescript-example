@@ -3,12 +3,19 @@
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/Ebazhanov/storybookts.git",
-  "author": "Evgeny Bazhanov <evg.bazhanov@yahoo.com>",
+  "author": "Evgeny Bazhanov",
   "license": "MIT",
   "dependencies": {
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "styled-components": "^5.1.1"
+  },
+  "scripts": {
+    "storybook": "start-storybook -p 6006",
+    "predeploy": "npm run build-storybook",
+    "homepage": "https://github.com/Ebazhanov/storybookts.git",
+    "deploy-storybook": "gh-pages -d storybook-static",
+    "build-storybook": "build-storybook"
   },
   "devDependencies": {
     "@babel/core": "^7.11.0",
@@ -22,12 +29,9 @@
     "@types/jest": "^26.0.8",
     "@types/styled-components": "^5.1.2",
     "babel-loader": "^8.1.0",
+    "gh-pages": "^3.1.0",
     "jest": "^26.2.2",
     "ts-jest": "^26.1.4",
     "typescript": "^3.9.7"
-  },
-  "scripts": {
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
   }
 }
