@@ -4,7 +4,7 @@
 
 ### Todos
 - [x] transpile code using Babel instead of Webpack
-- [ ] add more components and stories for them
+- [x] add material-ui support
 - [ ] write unit tests for each component with React Testing Library
 
 [DEMO](https://ebazhanov.github.io/storybook-typescript-example)
