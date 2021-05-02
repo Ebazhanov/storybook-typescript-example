@@ -11,15 +11,16 @@
     "styled-components": "^5.1.1"
   },
   "scripts": {
-    "storybook": "start-storybook -p 6006",
+    "start": "start-storybook -p 6006",
     "predeploy": "npm run build-storybook",
     "homepage": "https://github.com/Ebazhanov/storybookts.git",
-    "deploy-storybook": "gh-pages -d storybook-static",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "deploy-storybook": "gh-pages -d storybook-static"
   },
   "devDependencies": {
     "@babel/core": "^7.11.0",
     "@babel/preset-typescript": "^7.10.4",
+    "@material-ui/core": "^4.11.4",
     "@storybook/addon-a11y": "^5.3.19",
     "@storybook/addon-actions": "^5.3.19",
     "@storybook/addon-docs": "^5.3.19",
