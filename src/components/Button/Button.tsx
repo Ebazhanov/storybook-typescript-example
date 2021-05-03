@@ -1,16 +1,17 @@
-import React, { memo } from 'react';
-import { StyledButton } from './styled';
-import { ComponentProps } from './types';
+import React, { forwardRef, memo } from 'react';
 
-function Button(props: ComponentProps) {
-    const { onClick, children, id } = props;
+import { ButtonProps } from './types';
+import { Wrapper } from './styled';
+
+const Button = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
+    const { children, disabled = false, onClick, secondary = false, type = 'button', ...rest } = props;
 
     return (
-        <StyledButton id={id} onClick={onClick}>
+        <Wrapper disabled={disabled} onClick={onClick} ref={ref} type={type}>
             {children}
-        </StyledButton>
+        </Wrapper>
     );
-}
+});
 
-export { StyledButton };
+export { Wrapper as StyledButton };
 export default memo(Button);

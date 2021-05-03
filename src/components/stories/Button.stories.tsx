@@ -1,6 +1,6 @@
+import { PageWrapper } from '../storybook';
 import React from 'react';
 import { Button } from '..';
-import { PageWrapper } from '../storybook';
 
 export default {
     title: 'Components/Button',
@@ -9,19 +9,31 @@ export default {
 
 export const Default = () => (
     <PageWrapper>
-        <Button id="Button">Search</Button>
+        <Button>Default</Button>
     </PageWrapper>
 );
 
-export const WithClick = () => (
+export const Secondary = () => (
+    <PageWrapper>
+        <Button secondary>Secondary</Button>
+    </PageWrapper>
+);
+
+export const Disabled = () => (
+    <PageWrapper>
+        <Button disabled>Disabled</Button>
+    </PageWrapper>
+);
+
+export const WithClickListener = () => (
     <PageWrapper>
         <Button
             onClick={(event) => {
-                alert('You clicked on the button');
+                alert('You clicked the "non-disabled" button');
                 console.log(event);
             }}
         >
-            Search
+            Click to see the alert
         </Button>
     </PageWrapper>
 );

@@ -7,13 +7,6 @@ export default {
     component: RadioWrapper,
 };
 
-export const Intro = () => (
-    <PageWrapper>
-        <h1>Radio</h1>
-        <p>Radios are Radios, it is as simple as that. Period.</p>
-    </PageWrapper>
-);
-
 export const StandardWithContent = () => (
     <PageWrapper>
         <RadioWrapper defaultValue="female">
