@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { PageWrapper } from '../storybook';
-import AutocompleteComponent from '../Autocomplete';
 import { OptionType } from '../Autocomplete/types';
+import AutocompleteComponent from '../Autocomplete';
 
 export default {
     title: 'Components/Autocomplete',

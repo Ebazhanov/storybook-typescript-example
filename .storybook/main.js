@@ -7,8 +7,8 @@ module.exports = {
     addons: [
         '@storybook/addon-storysource',
         '@storybook/addon-docs',
-        '@storybook/addon-actions',
-        '@storybook/addon-a11y'
+        '@storybook/addon-knobs/register',
+        '@storybook/addon-a11y/register',
     ],
     webpackFinal: async (config) => {
         config.module.rules.push(
@@ -21,26 +21,16 @@ module.exports = {
                 loaders: [
                     {
                         loader: require.resolve('@storybook/source-loader'),
-                        options: {parser: 'typescript'},
+                        options: { parser: 'typescript' },
                     },
                 ],
                 enforce: 'pre',
-            },
-            {
-                test: /\.svg$/,
-                use: [
-                    {
-                        loader: '@svgr/webpack',
-                        options: {
-                            icon: true,
-                        },
-                    },
-                ],
             },
         );
 
         config.resolve.extensions.push('.ts', '.tsx');
         config.resolve.modules.push(SRC, 'node_modules');
+
         return config;
     },
 };

@@ -3,7 +3,7 @@ import { AutocompleteChangeDetails, AutocompleteChangeReason } from '@material-u
 
 export type OptionType = { title: string };
 
-export type AutocompletePropsTypes = {
+export interface AutocompletePropsTypes {
     onDelete: (title: (title: string) => void) => void;
     AutocompleteProps: {
         options: OptionType[];
@@ -17,4 +17,4 @@ export type AutocompletePropsTypes = {
             details?: AutocompleteChangeDetails<OptionType> | undefined,
         ) => void;
     };
-};
+}

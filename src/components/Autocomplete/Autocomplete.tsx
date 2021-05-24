@@ -1,10 +1,10 @@
 import React from 'react';
-import { Autocomplete } from '@material-ui/lab';
+import Autocomplete from '@material-ui/lab/Autocomplete';
 import { Chip } from '@material-ui/core';
 import { AutocompletePropsTypes } from './types';
 import { StyledChipContainer, StyledTextInput } from './styled';
 
-function AutocompleteComponent(props: AutocompletePropsTypes) {
+const AutocompleteComponent = (props: AutocompletePropsTypes) => {
     const { AutocompleteProps, onDelete } = props;
     const { options, defaultValue, getOptionLabel, value, onChange } = AutocompleteProps;
 
@@ -29,6 +29,6 @@ function AutocompleteComponent(props: AutocompletePropsTypes) {
             </StyledChipContainer>
         </>
     );
-}
+};
 
 export default AutocompleteComponent;
