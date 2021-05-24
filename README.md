@@ -2,10 +2,14 @@
 
 ![Alt text](https://monosnap.com/image/uXRlRFmjVE5WPFSgL1kEhGbtbALCUS)
 
-### Todos
-- [x] transpile code using Babel instead of Webpack
-- [x] add material-ui support
-- [ ] write unit tests for each component with React Testing Library
 
-[DEMO](https://ebazhanov.github.io/storybook-typescript-example)
+### How to publish
+- `$ yarn run deploy-storybook` 
+
+[gh-pages](https://ebazhanov.github.io/storybook-typescript-example)
+
+### Todos
+- [ ] add more material-ui components
+- [ ] write unit tests using RTL
+
 ----
