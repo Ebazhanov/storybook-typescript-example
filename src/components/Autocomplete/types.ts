@@ -4,7 +4,7 @@ import { AutocompleteChangeDetails, AutocompleteChangeReason } from '@material-u
 export type OptionType = { title: string };
 
 export interface AutocompletePropsTypes {
-    onDelete: (title: (title: string) => void) => void;
+    onDelete: (title: string) => void;
     AutocompleteProps: {
         options: OptionType[];
         defaultValue: OptionType[];

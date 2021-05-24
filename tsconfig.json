@@ -65,13 +65,6 @@
     // "emitDecoratorMetadata": true,         /* Enables experimental support for emitting type metadata for decorators. */
     "jsx": "react"
   },
-  "include": [
-    "src",
-    "@types"
-  ],
-  "exclude": [
-    "node_modules",
-    "build",
-    "storybook-static"
-  ]
+  "include": ["src", "@types"],
+  "exclude": ["node_modules", "build", "storybook-static"]
 }

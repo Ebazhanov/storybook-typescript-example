@@ -23,7 +23,7 @@ const AutocompleteComponent = (props: AutocompletePropsTypes) => {
             <StyledChipContainer>
                 {value.map((v) => (
                     <div key={v.title}>
-                        <Chip key={v.title} label={v.title} onDelete={onDelete} />
+                        <Chip key={v.title} label={v.title} onDelete={()=> onDelete(v.title)} />
                     </div>
                 ))}
             </StyledChipContainer>
