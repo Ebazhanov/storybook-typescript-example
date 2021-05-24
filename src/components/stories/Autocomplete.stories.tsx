@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { PageWrapper } from '../storybook';
-import AutocompleteComponent from '../../../../storybook-typescript-example/src/components/Autocomplete';
+import AutocompleteComponent from '../Autocomplete';
 import { OptionType } from '../Autocomplete/types';
 
 export default {
