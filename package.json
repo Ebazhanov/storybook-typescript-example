@@ -32,6 +32,7 @@
     "@storybook/source-loader": "^6.2.9",
     "@types/styled-components": "^5.1.4",
     "babel-loader": "^8.2.2",
+    "classnames": "^2.3.1",
     "gh-pages": "^3.1.0",
     "prettier": "^2.3.0",
     "ts-jest": "^26.4.4",

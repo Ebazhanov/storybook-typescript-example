@@ -1,15 +1,15 @@
 import { ReactNode } from 'react';
+import { RadioProps as MuiRadioProps } from '@material-ui/core/Radio';
 
-export type ComponentProps = {
-    children?: ReactNode;
-    defaultValue?: string;
-    label?: string;
-    row?: boolean;
-};
+export interface RadioProps {
+    label?: ReactNode;
+    muiRadioProps?: MuiRadioProps;
+}
 
-export type RadioElementProps = {
+export interface RadioGroupProps {
+    label?: ReactNode;
+    hasError?: boolean;
+    message?: ReactNode;
     disabled?: boolean;
-    label: string;
-    value: string;
-    labelPlacement?: 'end' | 'start' | 'top' | 'bottom' | undefined;
-};
+    options?: (RadioProps & { key: string })[];
+}

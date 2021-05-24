@@ -1,42 +1,48 @@
 import React from 'react';
-import { FormControl, FormControlLabel, FormLabel, Radio, RadioGroup } from '@material-ui/core';
-import { ComponentProps, RadioElementProps } from './types';
+import classnames from 'classnames';
 
-function RadioWrapper(props: ComponentProps) {
-    const { children, defaultValue = '', label = '', row = false } = props;
+import MuiRadio from '@material-ui/core/Radio';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import MuiRadioGroup from '@material-ui/core/RadioGroup';
+
+import { RadioGroupProps, RadioProps } from './types';
+import { Wrapper } from './styled';
+
+function Radio(props: RadioProps) {
+    const { muiRadioProps, ...rest } = props;
+    return <FormControlLabel {...rest} control={<MuiRadio {...muiRadioProps} />} />;
+}
+
+function RadioGroup(props: RadioGroupProps) {
+    const {
+        children,
+        label,
+        name = '',
+        message,
+        hasError = false,
+        generateCss,
+        id,
+        className,
+        disabled = false,
+        ...rest
+    } = props;
 
     if (!children) {
         return null;
     }
 
-    const [value, setValue] = React.useState(defaultValue);
-
-    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setValue((event.target as HTMLInputElement).value);
-    };
-
     return (
-        <FormControl component="fieldset">
-            <FormLabel component="legend">{label}</FormLabel>
-            <RadioGroup aria-label={label} name={label} defaultValue={value} onChange={handleChange} row={row}>
-                {children}
-            </RadioGroup>
-        </FormControl>
+        <Wrapper
+            className={classnames(className, {
+                disabled,
+                hasError,
+            })}
+        >
+            <MuiRadioGroup {...rest}>{children}</MuiRadioGroup>
+        </Wrapper>
     );
 }
 
-function RadioElement(props: RadioElementProps) {
-    const { value, label, disabled = false, labelPlacement = 'end' } = props;
-    return (
-        <FormControlLabel
-            value={value}
-            control={<Radio />}
-            label={label}
-            disabled={disabled}
-            labelPlacement={labelPlacement}
-        />
-    );
-}
+export { Radio };
 
-export { RadioElement };
-export default RadioWrapper;
+export default RadioGroup;

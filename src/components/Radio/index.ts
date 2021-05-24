@@ -1,2 +1,3 @@
-export { default, RadioElement } from './Radio';
-export type { ComponentProps, RadioElementProps } from './types';
+export { default, Radio } from './Radio';
+export type { RadioGroupProps, RadioProps } from './types';
+export { Wrapper } from './styled';

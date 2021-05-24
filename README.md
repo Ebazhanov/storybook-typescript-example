@@ -6,7 +6,7 @@
 - `$ yarn build-storybook` // will output a static Storybook in the storybook-static directory
 - `$ yarn deploy-storybook` // deployed to github static site hosting service.
 
-[gh-pages](https://ebazhanov.github.io/storybook-typescript-example)
+FYI [gh-pages](https://ebazhanov.github.io/storybook-typescript-example)
 
 ### Todos:
 - [ ] add more material-ui components
