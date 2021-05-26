@@ -1,20 +1,11 @@
 import * as React from 'react';
-import { AutocompleteChangeDetails, AutocompleteChangeReason } from '@material-ui/lab';
+import { AutocompleteProps } from '@material-ui/lab';
 
-export type OptionType = { title: string };
+export type OptionType = { title: string; value: string };
 
-export interface AutocompletePropsTypes {
-    onDelete: (title: string) => void;
-    AutocompleteProps: {
-        options: OptionType[];
-        defaultValue: OptionType[];
-        getOptionLabel: (option: OptionType) => string;
-        value: OptionType[];
-        onChange?: (
-            event: React.ChangeEvent<{}>,
-            value: OptionType[],
-            reason: AutocompleteChangeReason,
-            details?: AutocompleteChangeDetails<OptionType> | undefined,
-        ) => void;
-    };
+export interface AutocompletePropsTypes
+    extends Omit<AutocompleteProps<OptionType, any, any, any>, 'className' | 'renderInput'> {
+    label?: React.ReactNode;
+    placeholder?: string;
+    onDelete?: (value: string) => void;
 }

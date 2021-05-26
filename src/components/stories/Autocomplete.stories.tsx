@@ -9,13 +9,30 @@ export default {
 };
 
 const top100Films: OptionType[] = [
-    { title: 'The Shawshank Redemption' },
-    { title: 'The Godfather' },
-    { title: 'The Dark Knight' },
-    { title: '12 Angry Men' },
+    { value: 'The Shawshank Redemption', title: 'The Shawshank Redemption' },
+    { value: 'The Godfather', title: 'The Godfather' },
+    { value: 'The Dark Knight', title: 'The Dark Knight' },
+    { value: '12 Angry Men', title: '12 Angry Men' },
 ];
 
-export const Default = () => {
+export const SingleChoice = () => {
+    const [value, setValue] = useState<OptionType>();
+
+    return (
+        <PageWrapper>
+            <AutocompleteComponent
+                freeSolo
+                options={top100Films}
+                defaultValue={top100Films}
+                getOptionLabel={(option) => option.title}
+                value={value}
+                onChange={(e, newValue) => setValue(newValue as OptionType)}
+            />
+        </PageWrapper>
+    );
+};
+
+export const MultipleSelectChoice = () => {
     const [value, setValue] = useState<OptionType[]>([]);
 
     return (
@@ -24,13 +41,12 @@ export const Default = () => {
                 onDelete={(title) => {
                     setValue((prevValue) => prevValue.filter((v) => v.title !== title));
                 }}
-                AutocompleteProps={{
-                    options: top100Films,
-                    defaultValue: [top100Films[13]],
-                    getOptionLabel: (option) => option.title,
-                    value,
-                    onChange: (e, newValue) => setValue(newValue),
-                }}
+                multiple
+                options={top100Films}
+                defaultValue={top100Films}
+                getOptionLabel={(option) => option.title}
+                value={value}
+                onChange={(e, newValue) => setValue(newValue as OptionType[])}
             />
         </PageWrapper>
     );
