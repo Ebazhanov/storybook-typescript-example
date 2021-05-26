@@ -1,4 +1,4 @@
-# Playground with Storybook based on Typescript
+# Playground with Storybook for React App based on Material-UI and TypeScript
 
 ![Alt text](https://monosnap.com/image/uXRlRFmjVE5WPFSgL1kEhGbtbALCUS)
 
