@@ -9,6 +9,7 @@
 FYI [gh-pages](https://ebazhanov.github.io/storybook-typescript-example)
 
 ### Todos:
+- [ ] publish on npmjs.com to be able do releases and connect to private project
 - [ ] add more material-ui components
 - [ ] write unit tests using RTL
 
