@@ -1,31 +1,30 @@
 import React from 'react';
-import Autocomplete from '@material-ui/lab/Autocomplete';
-import { Chip } from '@material-ui/core';
+import { Autocomplete as MuiAutocomplete } from '@material-ui/lab';
+import { Chip, Typography } from '@material-ui/core';
 import { AutocompletePropsTypes, OptionType } from './types';
 import { StyledChipContainer, StyledTextInput } from './styled';
 
-const AutocompleteComponent = (props: AutocompletePropsTypes) => {
+const Autocomplete = (props: AutocompletePropsTypes) => {
     const { onDelete, ...rest } = props;
 
     return (
         <>
-            <Autocomplete
+            <MuiAutocomplete
                 {...rest}
                 renderTags={() => null}
-                renderInput={(params) => <StyledTextInput {...params} variant="outlined" label="select options" />}
+                renderInput={(params) => <StyledTextInput {...params} variant='outlined' label='select options' />}
+                renderOption={(option: OptionType) => <Typography>{option.title}</Typography>}
             />
             <StyledChipContainer>
                 {onDelete &&
-                    rest.value !== null &&
-                    rest.value !== undefined &&
-                    (rest.value as OptionType[]).map((v) => (
-                        <div key={v.title}>
-                            <Chip key={v.title} label={v.title} onDelete={() => onDelete(v.title)} />
-                        </div>
-                    ))}
+                (Array.isArray(rest.value) ? (rest.value as OptionType[]) : []).map((v) => (
+                    <div key={v.title}>
+                        <Chip key={v.title} label={v.title} onDelete={() => onDelete ? onDelete(v.title) : []} />
+                    </div>
+                ))}
             </StyledChipContainer>
         </>
     );
 };
 
-export default AutocompleteComponent;
+export default Autocomplete;

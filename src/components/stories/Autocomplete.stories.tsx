@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { PageWrapper } from '../storybook';
 import { OptionType } from '../Autocomplete/types';
-import AutocompleteComponent from '../Autocomplete';
+import Autocomplete from '../Autocomplete';
+import { createFilterOptions } from '@material-ui/lab';
 
 export default {
     title: 'Components/Autocomplete',
-    component: AutocompleteComponent,
+    component: Autocomplete,
 };
 
 const top100Films: OptionType[] = [
@@ -15,12 +16,17 @@ const top100Films: OptionType[] = [
     { value: '12 Angry Men', title: '12 Angry Men' },
 ];
 
+const filterOptions = createFilterOptions<OptionType>({
+    matchFrom: 'start',
+    limit: 2,
+});
+
 export const SingleChoice = () => {
     const [value, setValue] = useState<OptionType>();
 
     return (
         <PageWrapper>
-            <AutocompleteComponent
+            <Autocomplete
                 freeSolo
                 options={top100Films}
                 defaultValue={top100Films}
@@ -37,7 +43,7 @@ export const MultipleSelectChoice = () => {
 
     return (
         <PageWrapper>
-            <AutocompleteComponent
+            <Autocomplete
                 onDelete={(title) => {
                     setValue((prevValue) => prevValue.filter((v) => v.title !== title));
                 }}
@@ -47,6 +53,7 @@ export const MultipleSelectChoice = () => {
                 getOptionLabel={(option) => option.title}
                 value={value}
                 onChange={(e, newValue) => setValue(newValue as OptionType[])}
+                filterOptions={filterOptions}
             />
         </PageWrapper>
     );
