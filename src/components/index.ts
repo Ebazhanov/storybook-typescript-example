@@ -1,3 +1,3 @@
 export { default as Button, StyledButton } from './Button';
 export { default as RadioWrapper } from './Radio';
-export { default as Autocomplete } from './Autocomplete'
+export { default as Autocomplete } from './Autocomplete';

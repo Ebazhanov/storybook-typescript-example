@@ -12,16 +12,16 @@ const Autocomplete = (props: AutocompletePropsTypes) => {
             <MuiAutocomplete
                 {...rest}
                 renderTags={() => null}
-                renderInput={(params) => <StyledTextInput {...params} variant='outlined' label='select options' />}
+                renderInput={(params) => <StyledTextInput {...params} variant="outlined" label="select options" />}
                 renderOption={(option: OptionType) => <Typography>{option.title}</Typography>}
             />
             <StyledChipContainer>
                 {onDelete &&
-                (Array.isArray(rest.value) ? (rest.value as OptionType[]) : []).map((v) => (
-                    <div key={v.title}>
-                        <Chip key={v.title} label={v.title} onDelete={() => onDelete ? onDelete(v.title) : []} />
-                    </div>
-                ))}
+                    (Array.isArray(rest.value) ? (rest.value as OptionType[]) : []).map((v) => (
+                        <div key={v.title}>
+                            <Chip key={v.title} label={v.title} onDelete={() => (onDelete ? onDelete(v.title) : [])} />
+                        </div>
+                    ))}
             </StyledChipContainer>
         </>
     );

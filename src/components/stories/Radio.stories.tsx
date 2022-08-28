@@ -20,15 +20,10 @@ export const Standard = () => {
 
     return (
         <PageWrapper>
-            <RadioGroup
-                name='standard-usage'
-                onChange={onChange}
-                label='Standard Usage'
-                defaultValue={defaultValue}
-            >
-                <Radio value='female' label='Female' />
-                <Radio value='male' label='Male' />
-                <Radio value='other' label='Other' />
+            <RadioGroup name="standard-usage" onChange={onChange} label="Standard Usage" defaultValue={defaultValue}>
+                <Radio value="female" label="Female" />
+                <Radio value="male" label="Male" />
+                <Radio value="other" label="Other" />
             </RadioGroup>
         </PageWrapper>
     );
@@ -45,15 +40,15 @@ export const DisabledState = () => {
     return (
         <PageWrapper>
             <RadioGroup
-                name='disabled-state'
+                name="disabled-state"
                 onChange={onChange}
-                label='Disabled State'
+                label="Disabled State"
                 defaultValue={defaultValue}
                 disabled
             >
-                <Radio value='female' label='Female' disabled />
-                <Radio value='male' label='Male' disabled />
-                <Radio value='other' label='Other' disabled />
+                <Radio value="female" label="Female" disabled />
+                <Radio value="male" label="Male" disabled />
+                <Radio value="other" label="Other" disabled />
             </RadioGroup>
         </PageWrapper>
     );
@@ -69,15 +64,15 @@ export const HorizontalLayout = () => {
     return (
         <PageWrapper>
             <RadioGroup
-                name='horizontal-layout'
+                name="horizontal-layout"
                 onChange={onChange}
-                label='Horizontal layout'
+                label="Horizontal layout"
                 defaultValue={defaultValue}
                 row
             >
-                <Radio value='female' label='Female' />
-                <Radio value='male' label='Male' />
-                <Radio value='other' label='Other' />
+                <Radio value="female" label="Female" />
+                <Radio value="male" label="Male" />
+                <Radio value="other" label="Other" />
             </RadioGroup>
         </PageWrapper>
     );
@@ -93,16 +88,16 @@ export const LabelPlacement = () => {
     return (
         <PageWrapper>
             <RadioGroup
-                name='label-placement'
+                name="label-placement"
                 onChange={onChange}
-                label='Label placement'
+                label="Label placement"
                 defaultValue={defaultValue}
                 row
             >
-                <Radio value='top' label='Top' labelPlacement='top' />
-                <Radio value='start' label='Start' labelPlacement='start' />
-                <Radio value='bottom' label='Bottom' labelPlacement='bottom' />
-                <Radio value='end' label='End' labelPlacement='end' />
+                <Radio value="top" label="Top" labelPlacement="top" />
+                <Radio value="start" label="Start" labelPlacement="start" />
+                <Radio value="bottom" label="Bottom" labelPlacement="bottom" />
+                <Radio value="end" label="End" labelPlacement="end" />
             </RadioGroup>
         </PageWrapper>
     );
@@ -118,19 +113,19 @@ export const PassingRadioProps = () => {
     return (
         <PageWrapper>
             <RadioGroup
-                name='label-placement'
+                name="label-placement"
                 onChange={onChange}
-                label='Use of Radio props'
+                label="Use of Radio props"
                 defaultValue={defaultValue}
             >
                 <Radio
-                    value='top'
-                    label='Disabled ripple, small size radio button'
+                    value="top"
+                    label="Disabled ripple, small size radio button"
                     muiRadioProps={{ disableRipple: true, size: 'small' }}
                 />
-                <Radio value='start' label='Disabled' muiRadioProps={{ disabled: true }} />
-                <Radio value='bottom' label='Default Mui color' muiRadioProps={{ color: 'default' }} />
-                <Radio value='end' label='Without Radio props' />
+                <Radio value="start" label="Disabled" muiRadioProps={{ disabled: true }} />
+                <Radio value="bottom" label="Default Mui color" muiRadioProps={{ color: 'default' }} />
+                <Radio value="end" label="Without Radio props" />
             </RadioGroup>
         </PageWrapper>
     );
@@ -162,20 +157,20 @@ export const ErrorState = () => {
 
     return (
         <PageWrapper>
-            <form onSubmit={handleSubmit} name='simple-form'>
+            <form onSubmit={handleSubmit} name="simple-form">
                 <RadioGroup
-                    name='error-state'
-                    label='Select Black'
+                    name="error-state"
+                    label="Select Black"
                     value={value}
                     onChange={onChange}
                     hasError={error}
                     message={helperText}
                 >
-                    <FormControlLabel value="best" control={<Radio/>} label="The best!" />
-                    <FormControlLabel value="worst" control={<Radio/>} label="The worst." />
+                    <FormControlLabel value="best" control={<Radio />} label="The best!" />
+                    <FormControlLabel value="worst" control={<Radio />} label="The worst." />
                 </RadioGroup>
                 <FormHelperText>{helperText}</FormHelperText>
-                <Button type='submit' variant='outlined' size='small'>
+                <Button type="submit" variant="outlined" size="small">
                     Check Answer
                 </Button>
             </form>
